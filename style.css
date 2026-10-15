@@ -1,12 +1,15 @@
 /* --- CSS Variables & Reset --- */
 :root {
-    /* Improved contrast colors */
-    --primary: #4338ca;         /* Deeper indigo for better accessibility */
-    --primary-hover: #3730a3;
-    --bg-color: #f8fafc;        /* Cleaner, slightly lighter background */
+    /* Muted and darker primary color */
+    --primary: #1e3a8a;         /* Dark Muted Navy Blue */
+    --primary-hover: #172554;
+    --bg-color: #f8fafc;        
     --card-bg: #ffffff;
-    --text-main: #0f172a;       /* Very dark slate for maximum readability */
-    --text-muted: #334155;      /* Darker gray for body text and descriptions */
+    
+    /* NEW TEXT COLORS */
+    --text-main: #16082C;       /* Deep dark purple for main text */
+    --text-muted: #6b5b7b;      /* Muted purple-gray for secondary text */
+    
     --border-color: #e2e8f0;
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
     --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
@@ -137,7 +140,7 @@ main {
 }
 
 .btn-secondary:hover {
-    background-color: rgba(67, 56, 202, 0.05);
+    background-color: rgba(30, 58, 138, 0.05);
 }
 
 /* --- About Section --- */
@@ -188,13 +191,21 @@ main {
 /* Summary (Collapsed view) */
 .card-summary {
     cursor: pointer;
-    list-style: none; /* Hide default arrow */
+    list-style: none; 
     padding: 1.5rem;
     display: block;
 }
 
+/* STRICT ARROW REMOVAL FOR ALL BROWSERS */
 .card-summary::-webkit-details-marker {
-    display: none; /* Hide default arrow in Safari/Chrome */
+    display: none; 
+}
+.card-summary::marker {
+    content: ""; 
+    display: none;
+}
+.card-summary {
+    list-style: none;
 }
 
 .summary-header {
@@ -219,36 +230,29 @@ main {
 
 .view-details {
     font-size: 0.85rem;
-    color: var(--primary);
-    font-weight: 600;
-    background-color: rgba(67, 56, 202, 0.1);
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    transition: all 0.2s;
-}
-
-/* Clean single arrow using CSS */
-.view-details::after {
-    content: "↓";
-    font-size: 0.8rem;
-    font-weight: bold;
-    transition: transform 0.3s ease;
-}
-
-/* Rotate the arrow when expanded */
-.project-card[open] .view-details::after {
-    transform: rotate(180deg);
-}
-
-.project-card[open] .view-details {
-    background-color: var(--primary);
     color: white;
+    font-weight: 600;
+    background-color: var(--primary);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    display: inline-block;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
 }
 
-/* --- THE FIX: Forcefully hide the summary grid when expanded --- */
+.view-details:hover {
+    background-color: var(--primary-hover);
+}
+
+/* When expanded, change button to outline style */
+.project-card[open] .view-details {
+    background-color: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+/* --- FORCE HIDE summary grid when expanded --- */
 .project-card[open] .summary-grid {
     display: none !important;
     visibility: hidden;
@@ -269,7 +273,7 @@ main {
 
 .summary-grid strong {
     font-size: 0.85rem;
-    color: var(--text-main);
+    color: var(--text-main); /* Applied new text color */
     display: block;
     margin-bottom: 0.25rem;
     font-weight: 600;
@@ -282,7 +286,7 @@ main {
 
 .summary-grid li {
     font-size: 0.85rem;
-    color: var(--text-muted);
+    color: var(--text-muted); /* Applied muted text color */
     margin-bottom: 0.25rem;
     position: relative;
     padding-left: 1rem;
@@ -298,7 +302,7 @@ main {
 
 /* Details (Expanded view) */
 .card-details {
-    padding: 1.5rem;
+    padding: 2rem 1.5rem 1.5rem; 
     border-top: 1px solid var(--border-color);
     animation: fadeIn 0.3s ease-in-out;
 }
@@ -310,13 +314,13 @@ main {
 
 .card-details p {
     font-size: 0.95rem;
-    color: var(--text-muted);
+    color: var(--text-muted); /* Applied muted text color */
     margin-bottom: 0.75rem;
 }
 
 .card-details h5 {
     font-size: 1rem;
-    color: var(--text-main);
+    color: var(--text-main); /* Applied main text color */
     margin: 1.5rem 0 0.5rem;
     font-weight: 600;
 }
@@ -329,7 +333,7 @@ main {
 
 .card-details li {
     font-size: 0.95rem;
-    color: var(--text-muted);
+    color: var(--text-muted); /* Applied muted text color */
     margin-bottom: 0.35rem;
 }
 
@@ -349,7 +353,7 @@ footer {
     text-align: center;
     padding: 2rem 0;
     border-top: 1px solid var(--border-color);
-    color: var(--text-muted);
+    color: var(--text-muted); /* Applied muted text color */
     font-size: 0.85rem;
 }
 
