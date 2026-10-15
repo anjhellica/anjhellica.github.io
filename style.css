@@ -1,12 +1,13 @@
 /* --- CSS Variables & Reset --- */
 :root {
-    --primary: #5c4ee5;
-    --primary-hover: #4a3bce;
-    --bg-color: #f4f6fc;
+    /* Improved contrast colors */
+    --primary: #4338ca;         /* Deeper indigo for better accessibility */
+    --primary-hover: #3730a3;
+    --bg-color: #f8fafc;        /* Cleaner, slightly lighter background */
     --card-bg: #ffffff;
-    --text-main: #1f2937;
-    --text-muted: #6b7280;
-    --border-color: #e5e7eb;
+    --text-main: #0f172a;       /* Very dark slate for maximum readability */
+    --text-muted: #334155;      /* Darker gray for body text and descriptions */
+    --border-color: #e2e8f0;
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
     --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
@@ -84,7 +85,7 @@ main {
 .hero-subtitle {
     color: var(--text-muted);
     font-size: 0.9rem;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 0.5rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -136,7 +137,7 @@ main {
 }
 
 .btn-secondary:hover {
-    background-color: rgba(92, 78, 229, 0.05);
+    background-color: rgba(67, 56, 202, 0.05);
 }
 
 /* --- About Section --- */
@@ -187,7 +188,7 @@ main {
 /* Summary (Collapsed view) */
 .card-summary {
     cursor: pointer;
-    list-style: none; /* Hide default arrow in Firefox */
+    list-style: none; /* Hide default arrow */
     padding: 1.5rem;
     display: block;
 }
@@ -213,13 +214,14 @@ main {
 .summary-header .date {
     font-size: 0.9rem;
     color: var(--text-muted);
+    font-weight: 500;
 }
 
 .view-details {
     font-size: 0.85rem;
     color: var(--primary);
-    font-weight: 500;
-    background-color: rgba(92, 78, 229, 0.1);
+    font-weight: 600;
+    background-color: rgba(67, 56, 202, 0.1);
     padding: 0.25rem 0.75rem;
     border-radius: 20px;
     display: inline-flex;
@@ -230,8 +232,9 @@ main {
 
 /* Clean single arrow using CSS */
 .view-details::after {
-    content: "▼";
-    font-size: 0.6rem;
+    content: "↓";
+    font-size: 0.8rem;
+    font-weight: bold;
     transition: transform 0.3s ease;
 }
 
@@ -245,9 +248,14 @@ main {
     color: white;
 }
 
-/* Hide the summary grid entirely when the card is expanded */
+/* --- THE FIX: Forcefully hide the summary grid when expanded --- */
 .project-card[open] .summary-grid {
-    display: none;
+    display: none !important;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 .summary-grid {
@@ -264,6 +272,7 @@ main {
     color: var(--text-main);
     display: block;
     margin-bottom: 0.25rem;
+    font-weight: 600;
 }
 
 .summary-grid ul {
@@ -284,11 +293,12 @@ main {
     position: absolute;
     left: 0;
     color: var(--primary);
+    font-weight: bold;
 }
 
 /* Details (Expanded view) */
 .card-details {
-    padding: 0 1.5rem 1.5rem;
+    padding: 1.5rem;
     border-top: 1px solid var(--border-color);
     animation: fadeIn 0.3s ease-in-out;
 }
@@ -308,6 +318,7 @@ main {
     font-size: 1rem;
     color: var(--text-main);
     margin: 1.5rem 0 0.5rem;
+    font-weight: 600;
 }
 
 .card-details ul {
@@ -325,6 +336,7 @@ main {
 .card-details a {
     color: var(--primary);
     text-decoration: none;
+    font-weight: 500;
     word-break: break-all;
 }
 
