@@ -3,250 +3,255 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Anjhellica Joy Pacon | Portfolio</title>
-
-    <link rel="stylesheet" href="style.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- Background Decorations -->
-
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
-
     <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">anjhellica.github.io</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <nav class="navbar">
-        <div class="navbar-content">
-
-            <div class="logo">AP</div>
-
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#certifications">Certificates</a>
-                <a href="#contact">Contact</a>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <p class="hero-subtitle">Information Systems Student &bull; Aspiring IT Business Analyst</p>
+            <h1>Turning problems into organized systems and practical solutions.</h1>
+            <p class="hero-desc">I enjoy understanding processes, identifying gaps, and creating solutions that help people work more effectively. My work focuses on business analysis, documentation, process improvement, and user-centered design.</p>
+            <div class="hero-links">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#" class="btn btn-secondary" target="_blank">Resume (PDF)</a>
             </div>
+        </section>
 
-        </div>
-    </nav>
+        <!-- About Section -->
+        <section id="about" class="about">
+            <h2>ABOUT</h2>
+            <h3>Building solutions through analysis, organization, and collaboration.</h3>
+            <p>I'm Anjhellica Joy Pacon, an Information Systems student from CIIT College of Arts and Technology. I enjoy taking ownership of projects, refining ideas, organizing information, and helping teams transform concepts into practical solutions.</p>
+            <p>My goal is to grow into an IT Business Analyst who bridges business needs and technology through research, communication, and problem-solving.</p>
+        </section>
 
-    <!-- Hero -->
+        <!-- Projects / Case Studies Section -->
+        <section id="projects" class="projects">
+            <h2>CASE STUDIES</h2>
+            <h3>Selected projects and experiences.</h3>
 
-    <section class="hero">
-
-        <div class="hero-card">
-
-            <span class="hero-tag">
-                Information Systems Student • Aspiring IT Business Analyst
-            </span>
-
-            <h1>
-                Turning problems into organized systems and practical solutions.
-            </h1>
-
-            <p>
-                I enjoy understanding processes, identifying gaps, and creating
-                solutions that help people work more effectively. My work focuses
-                on business analysis, documentation, process improvement, and
-                user-centered design.
-            </p>
-
-            <div class="hero-buttons">
-
-                <a href="#projects" class="btn primary-btn">
-                    View My Work
-                </a>
-
-                <a href="documents/resume.pdf" class="btn secondary-btn" target="_blank">
-                    Resume
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- About -->
-
-    <section id="about" class="section">
-
-        <div class="section-header">
-            <span>ABOUT</span>
-
-            <h2>
-                Building solutions through analysis,
-                organization, and collaboration.
-            </h2>
-        </div>
-
-        <div class="about-card">
-
-            <p>
-                I'm Anjhellica Joy Pacon, an Information Systems student from
-                CIIT College of Arts and Technology.
-            </p>
-
-            <p>
-                I enjoy taking ownership of projects, refining ideas,
-                organizing information, and helping teams transform concepts
-                into practical solutions.
-            </p>
-
-            <p>
-                My goal is to grow into an IT Business Analyst who bridges
-                business needs and technology through research, communication,
-                and problem-solving.
-            </p>
-
-        </div>
-
-    </section>
-
-    <!-- Projects -->
-
-    <section id="projects" class="section">
-
-        <div class="section-header">
-            <span>CASE STUDIES</span>
-            <h2>Selected projects and experiences.</h2>
-        </div>
-
-        <div class="timeline">
-
+            <!-- Project 1: MenuWise -->
             <details class="project-card">
-
-                <summary>
-
-                    <div class="card-header">
-
-                        <div>
-                            <h3>MenuWise</h3>
-                            <p>April 2026 - Present</p>
-                        </div>
-
-                        <span class="expand">
-                            View Details
-                        </span>
-
+                <summary class="card-summary">
+                    <div class="summary-header">
+                        <h4>MenuWise</h4>
+                        <span class="date">April 2026 - Present</span>
+                        <span class="view-details">View Details &darr;</span>
                     </div>
-
-                    <div class="preview">
-
+                    <div class="summary-grid">
                         <div>
-                            <h4>Problem</h4>
-
+                            <strong>Problem</strong>
                             <ul>
-                                <li>Food waste</li>
+                                <li>Food waste in QC</li>
                                 <li>Overproduction</li>
                                 <li>Inventory visibility</li>
                             </ul>
                         </div>
-
                         <div>
-                            <h4>Actions</h4>
-
+                            <strong>Actions</strong>
                             <ul>
                                 <li>Concept refinement</li>
                                 <li>UI design</li>
                                 <li>Project coordination</li>
                             </ul>
                         </div>
-
                         <div>
-                            <h4>Result</h4>
-
+                            <strong>Result</strong>
                             <ul>
                                 <li>Functional web app</li>
                                 <li>Live prototype</li>
                             </ul>
                         </div>
-
                     </div>
-
                 </summary>
-
-                <div class="expanded-content">
-
-                    <h4>Overview</h4>
-
-                    <p>
-                        Inventory Analytics & Food Waste Monitoring Platform
-                        designed for food-based MSMEs.
-                    </p>
-
-                    <p>
-                        <strong>Role:</strong>
-                        Project Lead, UI/UX Designer, Documentation Contributor
-                    </p>
-
-                    <h4>Key Contributions</h4>
-
+                <div class="card-details">
+                    <p><strong>Overview:</strong> Inventory Analytics & Food Waste Monitoring Platform for MSMEs</p>
+                    <p><strong>Role:</strong> Project Lead, UI/UX Designer, Documentation Contributor</p>
+                    <p><strong>Tools:</strong> Figma, Lovable (AI-assisted web application builder), Google Docs, Lucidchart</p>
+                    
+                    <h5>Why This Mattered</h5>
+                    <p>Maginhawa Street is one of Quezon City's most active food districts and was officially recognized as the Maginhawa Art and Food Hub. Despite the area's vibrant food industry, food waste remains a significant challenge. Many inventory systems help businesses monitor stock shortages, but few provide insights into overproduction, overpurchasing, and food waste generation.</p>
+                    
+                    <h5>What I Did</h5>
                     <ul>
-                        <li>Conducted requirements gathering.</li>
-                        <li>Led UI/UX design decisions.</li>
-                        <li>Managed project documentation.</li>
-                        <li>Facilitated team collaboration.</li>
+                        <li>Helped refine the overall project concept and system direction.</li>
+                        <li>Created the project's first application prototype.</li>
+                        <li>Redesigned the user interface through Figma wireframes and layouts.</li>
+                        <li>Refined system features based on project requirements and user needs.</li>
+                        <li>Conducted quality checks focused on usability and user experience.</li>
+                        <li>Delegated tasks and coordinated project activities.</li>
+                        <li>Assisted in documentation review and editing.</li>
+                        <li>Supported potential client outreach and validation activities.</li>
                     </ul>
-
+                    
+                    <h5>Outcome</h5>
+                    <p>Developed a functional web application prototype that is currently accessible and testable.</p>
+                    <p><strong>Project Link:</strong> <a href="https://menuwiseapp.lovable.app/" target="_blank">https://menuwiseapp.lovable.app/</a></p>
+                    
+                    <h5>Key Learning</h5>
+                    <p>Effective business solutions start with understanding operational problems rather than immediately focusing on technology. This project strengthened my skills in product planning, requirements analysis, team coordination, and user-centered design.</p>
                 </div>
-
             </details>
 
-        </div>
+            <!-- Project 2: Sewpresa Crochets -->
+            <details class="project-card">
+                <summary class="card-summary">
+                    <div class="summary-header">
+                        <h4>Sewpresa Crochets</h4>
+                        <span class="date">2025 - Present</span>
+                        <span class="view-details">View Details &darr;</span>
+                    </div>
+                    <div class="summary-grid">
+                        <div>
+                            <strong>Problem</strong>
+                            <ul>
+                                <li>Order tracking</li>
+                                <li>Deadlines</li>
+                                <li>Client communication</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>Actions</strong>
+                            <ul>
+                                <li>Process creation</li>
+                                <li>Marketing</li>
+                                <li>Operations management</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>Result</strong>
+                            <ul>
+                                <li>Organized workflow</li>
+                                <li>Tracking systems</li>
+                            </ul>
+                        </div>
+                    </div>
+                </summary>
+                <div class="card-details">
+                    <p><strong>Overview:</strong> A small crochet business specializing in handmade and customized crochet products.</p>
+                    <p><strong>Role:</strong> Business Owner</p>
+                    <p><strong>Tools:</strong> Instagram, Facebook, Meta Business Suite, Google Docs, Google Sheets</p>
+                    
+                    <h5>Why This Mattered</h5>
+                    <p>Managing a small business involves more than creating products. Keeping track of orders, deadlines, customer communication, and payments requires organized processes to ensure customers receive updates and products on time.</p>
+                    
+                    <h5>What I Did</h5>
+                    <ul>
+                        <li>Managed customer inquiries and order tracking.</li>
+                        <li>Created structured customer response templates.</li>
+                        <li>Maintained records of orders, products, and deadlines.</li>
+                        <li>Organized payment and receipt tracking through spreadsheets.</li>
+                        <li>Created content and promotional posts for social media platforms.</li>
+                        <li>Coordinated customer communication from inquiry to delivery.</li>
+                    </ul>
+                    
+                    <h5>Outcome</h5>
+                    <p>Established a repeatable workflow for handling customer orders and business operations through simple documentation and tracking systems.</p>
+                    
+                    <h5>Deliverables</h5>
+                    <ul>
+                        <li>Customer response templates</li>
+                        <li>Order and deadline tracker</li>
+                        <li>Receipt management spreadsheet</li>
+                        <li>Product and promotional content</li>
+                        <li>Social media story campaigns</li>
+                    </ul>
+                    
+                    <h5>Key Learning</h5>
+                    <p>Running a small business reinforced the importance of organization, communication, and process management. Even simple systems can significantly improve operational efficiency.</p>
+                </div>
+            </details>
 
-    </section>
+            <!-- Project 3: UP Diliman Business Review -->
+            <details class="project-card">
+                <summary class="card-summary">
+                    <div class="summary-header">
+                        <h4>UP Diliman Business Review</h4>
+                        <span class="date">February 2026</span>
+                        <span class="view-details">View Details &darr;</span>
+                    </div>
+                    <div class="summary-grid">
+                        <div>
+                            <strong>Problem</strong>
+                            <ul>
+                                <li>Analyze management functions</li>
+                                <li>Review sustainability practices</li>
+                                <li>Connect theory to practice</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>Actions</strong>
+                            <ul>
+                                <li>Research</li>
+                                <li>Data synthesis</li>
+                                <li>Presentation</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>Result</strong>
+                            <ul>
+                                <li>Research paper</li>
+                                <li>Presentation slides</li>
+                            </ul>
+                        </div>
+                    </div>
+                </summary>
+                <div class="card-details">
+                    <p><strong>Overview:</strong> A business review paper examining management functions and sustainability practices within UP Diliman, with some supporting research on UP Los Baños.</p>
+                    <p><strong>Role:</strong> Researcher and Presenter</p>
+                    <p><strong>Tools:</strong> Google Docs, Google Slides</p>
+                    
+                    <h5>Why This Mattered</h5>
+                    <p>The project was designed to strengthen understanding of organizational management concepts by analyzing how a major educational institution implements management functions and sustainability initiatives.</p>
+                    
+                    <h5>What I Did</h5>
+                    <ul>
+                        <li>Researched UP Diliman's organizational practices and sustainability efforts.</li>
+                        <li>Gathered and evaluated information from public sources.</li>
+                        <li>Analyzed findings using management concepts discussed in class.</li>
+                        <li>Created a written business review paper and presentation materials.</li>
+                        <li>Presented findings and insights to support academic discussion.</li>
+                    </ul>
+                    
+                    <h5>Outcome</h5>
+                    <p>Produced a research paper and presentation that connected management theories with real-world institutional practices.</p>
+                    
+                    <h5>Deliverables</h5>
+                    <ul>
+                        <li>Business review paper</li>
+                        <li>Research documentation</li>
+                        <li>Presentation slides</li>
+                    </ul>
+                    
+                    <h5>Key Learning</h5>
+                    <p>The project improved my ability to analyze organizations, synthesize information from multiple sources, and communicate findings through structured reports and presentations.</p>
+                </div>
+            </details>
 
-    <section id="certifications" class="section">
-
-        <div class="section-header">
-            <span>CERTIFICATIONS</span>
-            <h2>Certificates and achievements.</h2>
-        </div>
-
-        <div class="cert-grid">
-
-            <div class="cert-card">
-                <span>Certificate</span>
-                <h3>Sample Certification</h3>
-            </div>
-
-        </div>
-
-    </section>
-
-    <section id="contact" class="section">
-
-        <div class="section-header">
-            <span>CONTACT</span>
-            <h2>Let's connect.</h2>
-        </div>
-
-        <div class="contact-grid">
-
-            <a href="mailto:your@email.com" class="contact-card">
-                Email
-            </a>
-
-            <a href="#" class="contact-card">
-                LinkedIn
-            </a>
-
-        </div>
-
-    </section>
+        </section>
+    </main>
 
     <footer>
-        © 2026 Anjhellica Joy Pacon
+        <p>&copy; 2026 Anjhellica Joy Pacon. All rights reserved.</p>
     </footer>
 
 </body>
