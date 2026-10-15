@@ -187,13 +187,13 @@ main {
 /* Summary (Collapsed view) */
 .card-summary {
     cursor: pointer;
-    list-style: none; /* Hide default arrow */
+    list-style: none; /* Hide default arrow in Firefox */
     padding: 1.5rem;
     display: block;
 }
 
 .card-summary::-webkit-details-marker {
-    display: none; /* Hide default arrow in Safari */
+    display: none; /* Hide default arrow in Safari/Chrome */
 }
 
 .summary-header {
@@ -215,14 +215,29 @@ main {
     color: var(--text-muted);
 }
 
-.summary-header .view-details {
+.view-details {
     font-size: 0.85rem;
     color: var(--primary);
     font-weight: 500;
     background-color: rgba(92, 78, 229, 0.1);
     padding: 0.25rem 0.75rem;
     border-radius: 20px;
-    transition: background-color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s;
+}
+
+/* Clean single arrow using CSS */
+.view-details::after {
+    content: "▼";
+    font-size: 0.6rem;
+    transition: transform 0.3s ease;
+}
+
+/* Rotate the arrow when expanded */
+.project-card[open] .view-details::after {
+    transform: rotate(180deg);
 }
 
 .project-card[open] .view-details {
@@ -230,13 +245,9 @@ main {
     color: white;
 }
 
-/* Rotate arrow when open */
-.project-card[open] .view-details::after {
-    content: " \2191"; /* Up arrow */
-}
-
-.view-details::after {
-    content: " \2193"; /* Down arrow */
+/* Hide the summary grid entirely when the card is expanded */
+.project-card[open] .summary-grid {
+    display: none;
 }
 
 .summary-grid {
@@ -337,7 +348,7 @@ footer {
     }
     
     .nav-links {
-        display: none; /* Hide nav links on very small screens, or stack them */
+        display: none;
     }
     
     .summary-grid {
