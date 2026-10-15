@@ -6,7 +6,7 @@
     --bg-color: #f8fafc;        
     --card-bg: #ffffff;
     
-    /* NEW TEXT COLORS */
+    /* TEXT COLORS */
     --text-main: #16082C;       /* Deep dark purple for main text */
     --text-muted: #6b5b7b;      /* Muted purple-gray for secondary text */
     
@@ -133,17 +133,7 @@ main {
     transform: translateY(-1px);
 }
 
-.btn-secondary {
-    background-color: transparent;
-    color: var(--primary);
-    border: 1px solid var(--primary);
-}
-
-.btn-secondary:hover {
-    background-color: rgba(30, 58, 138, 0.05);
-}
-
-/* --- About, Certifications, Contact Sections --- */
+/* --- About & Contact Sections --- */
 .about {
     margin-bottom: 4rem;
 }
@@ -169,36 +159,40 @@ main {
     font-size: 1rem;
 }
 
-.about a {
-    color: var(--primary);
+/* --- Contact Buttons --- */
+.contact-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--card-bg);
+    color: var(--text-main);
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
     text-decoration: none;
     font-weight: 500;
-}
-
-.about a:hover {
-    text-decoration: underline;
-}
-
-/* Certifications List Styling */
-.cert-list {
-    list-style: none;
-    padding: 0;
-    margin-top: 1rem;
-}
-
-.cert-list li {
-    background-color: var(--card-bg);
-    padding: 1rem 1.25rem;
-    border-radius: 8px;
-    margin-bottom: 0.75rem;
-    box-shadow: var(--shadow);
-    border-left: 4px solid var(--primary);
     font-size: 0.95rem;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+    transition: all 0.2s ease;
 }
 
-.cert-list .text-muted {
-    color: var(--text-muted);
-    font-size: 0.85rem;
+.contact-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.contact-btn svg {
+    width: 18px;
+    height: 18px;
 }
 
 /* --- Projects Section --- */
