@@ -1,13 +1,13 @@
 /* --- CSS Variables & Reset --- */
 :root {
-    /* Muted and darker primary color */
+    /* Original color palette preserved */
     --primary: #1e3a8a;         /* Dark Muted Navy Blue */
     --primary-hover: #172554;
     --bg-color: #f8fafc;        
     --card-bg: #ffffff;
     
     /* TEXT COLORS */
-    --text-main: #16082C;       /* Deep dark purple for main text */
+    --text-main: #16082C;       /* Deep dark purple for main body text */
     --text-muted: #6b5b7b;      /* Muted purple-gray for secondary text */
     
     --border-color: #e2e8f0;
@@ -138,15 +138,15 @@ main {
     margin-bottom: 4rem;
 }
 
-/* UPDATED: Section names are now the big, prominent titles */
+/* SECTION NAMES: Now large and prominent, using the original blue color */
 .about h2, .projects h2 {
     font-size: 1.5rem;
-    color: var(--primary);
+    color: var(--primary); 
     margin-bottom: 1rem;
     line-height: 1.3;
 }
 
-/* UPDATED: Descriptions are now the small, muted subtitles */
+/* DESCRIPTIONS: Now small, uppercase, and muted, using the original gray color */
 .about h3, .projects h3 {
     font-size: 0.85rem;
     color: var(--text-muted);
@@ -170,7 +170,6 @@ main {
     margin-top: 1.5rem;
 }
 
-/* UPDATED: Styles to match the "View My Work" primary button */
 .contact-btn {
     display: inline-flex;
     align-items: center;
