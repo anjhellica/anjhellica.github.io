@@ -374,6 +374,72 @@ main {
     text-decoration: underline;
 }
 
+.document-placeholder {
+    color: var(--text-muted);
+}
+
+.document-placeholder span {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+.project-gallery {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 1rem 0 0.75rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.project-gallery-item,
+.media-placeholder {
+    flex: 0 0 min(100%, 520px);
+    margin: 0;
+    scroll-snap-align: start;
+}
+
+.project-gallery-item img,
+.project-gallery-item video {
+    display: block;
+    width: 100%;
+    max-height: 360px;
+    border-radius: 8px;
+    object-fit: contain;
+    background-color: var(--bg-color);
+}
+
+.project-gallery-item figcaption,
+.media-placeholder figcaption {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+}
+
+.media-placeholder {
+    align-items: center;
+    background-color: var(--bg-color);
+    border: 1px dashed var(--border-color);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 220px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.media-placeholder-note {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.media-placeholder-note code {
+    color: var(--primary);
+    overflow-wrap: anywhere;
+}
+
 /* --- Footer --- */
 footer {
     text-align: center;
