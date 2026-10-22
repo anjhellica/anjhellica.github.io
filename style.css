@@ -138,7 +138,7 @@ main {
     margin-bottom: 4rem;
 }
 
-.about h2, .projects h2 {
+.about h2, .projects h2, .certifications h2 {
     font-size: 0.85rem;
     color: var(--text-muted);
     letter-spacing: 0.1em;
@@ -146,7 +146,7 @@ main {
     text-transform: uppercase;
 }
 
-.about h3, .projects h3 {
+.about h3, .projects h3, .certifications h3 {
     font-size: 1.5rem;
     color: var(--primary);
     margin-bottom: 1rem;
@@ -198,6 +198,80 @@ main {
 /* --- Projects Section --- */
 .projects {
     margin-bottom: 4rem;
+}
+
+.certifications {
+    margin-bottom: 4rem;
+}
+
+.certification-gallery {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 0.5rem 0 1rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.certification-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    flex: 0 0 min(82vw, 300px);
+    margin: 0;
+    overflow: hidden;
+    scroll-snap-align: start;
+}
+
+.certification-card img {
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: contain;
+    background-color: var(--bg-color);
+}
+
+.certification-placeholder {
+    align-items: center;
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-muted);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: 190px;
+    justify-content: center;
+    padding: 1rem;
+    text-align: center;
+}
+
+.certification-placeholder code,
+.gallery-note code {
+    color: var(--primary);
+    overflow-wrap: anywhere;
+}
+
+.certification-card figcaption {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 1rem;
+}
+
+.certification-card figcaption strong {
+    color: var(--text-main);
+    font-size: 0.95rem;
+}
+
+.certification-card figcaption span,
+.gallery-note {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.gallery-note {
+    margin-top: 0.25rem;
 }
 
 .project-card {
