@@ -287,7 +287,12 @@ main {
     cursor: pointer;
     list-style: none; 
     padding: 1.5rem;
-    display: block;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-summary > .project-gallery {
+    order: -1;
 }
 
 /* STRICT ARROW REMOVAL FOR ALL BROWSERS */
@@ -314,6 +319,22 @@ main {
 .summary-header h4 {
     font-size: 1.25rem;
     color: var(--primary);
+}
+
+.project-title-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.project-title-link:hover h4 {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+}
+
+.project-title-link:focus-visible {
+    border-radius: 2px;
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
 }
 
 .summary-header .date {
