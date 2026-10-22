@@ -236,39 +236,9 @@ main {
     background-color: var(--bg-color);
 }
 
-.certification-link:focus-visible,
-.certification-pdf:focus-visible {
+.certification-link:focus-visible {
     outline: 3px solid var(--primary);
     outline-offset: -3px;
-}
-
-.certification-pdf {
-    align-items: center;
-    background-color: var(--bg-color);
-    border-bottom: 1px solid var(--border-color);
-    color: var(--text-muted);
-    display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
-    height: 190px;
-    justify-content: center;
-    padding: 1rem;
-    text-decoration: none;
-    text-align: center;
-}
-
-.certification-pdf:hover {
-    color: var(--primary);
-}
-
-.pdf-badge {
-    background-color: var(--primary);
-    border-radius: 6px;
-    color: white;
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    padding: 0.5rem 0.65rem;
 }
 
 .gallery-note code {

@@ -1,4 +1,4 @@
-The certification gallery in `index.html` displays the image and PDF files in this folder. Clicking an image opens the full-size certificate; the Power BI PDF card opens the document.
+The certification gallery in `index.html` displays the image files in this folder. Clicking an image opens the full-size certificate.
 
 To add another image certificate, upload the image here and add a card inside `.certification-gallery` in `index.html`. Update the filename in both `href` and `src`, and provide descriptive alt text and a title:
 
@@ -13,4 +13,4 @@ To add another image certificate, upload the image here and add a card inside `.
 </figure>
 ```
 
-To add a PDF, use a `.certification-pdf` link containing a visible document label. The gallery scrolls horizontally on smaller screens and snaps to each card.
+The gallery scrolls horizontally on smaller screens and snaps to each card.
